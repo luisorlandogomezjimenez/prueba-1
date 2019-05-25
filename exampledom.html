@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mousemove</title>
+</head>
+<body>
+    <h1 id="heading">¡Hello World!</h1>
+    <p id="paragar">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus officia provident molestias itaque. Officia at quam, temporibus quasi id quae laborum facilis dolorem nostrum cupiditate iure voluptates sunt distinctio provident.</p>
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script>
+     $("h1").mousemove(function(event){
+         $("#paragar").offset({
+             left : event.pageX,
+             top: event.pageY
+         });
+     });
+    </script>
+</body>
+</html>

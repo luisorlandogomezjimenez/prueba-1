@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars</title>
+</head>
+<body>
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script>
+        var car = function(x, y){
+            this.x = x;
+            this.y = y;
+        };
+
+        var drawCar = function (car){
+            var carHtml = '<img src = "http://nostarch.com/images/car.png">';
+            var carElement = $(carHtml);
+
+            carElement.css({
+                position : "absolute",
+                left : car.x,
+                top : car.y
+            });
+            $("body").append(carElement);
+        };
+        var tesla =  new car(20, 20);
+        var nissan = new car(100, 200);
+
+        drawCar(tesla);
+        drawCar(nissan);
+
+    </script>
+</body>
+</html>
